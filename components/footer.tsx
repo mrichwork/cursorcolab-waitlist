@@ -8,14 +8,14 @@ export default function Footer() {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="mt-auto flex w-full items-center justify-center gap-1 border-t bg-background p-6 text-muted-foreground md:justify-start">
+      className="mt-auto flex w-full items-center justify-center gap-1 border-t border-secondary/30 bg-background p-6 text-muted-foreground md:justify-start">
       <motion.div variants={itemVariants}>
         Brought to you by{" "}
         <Link
           href="https://lakshb.dev"
           rel="noopener noreferrer"
           target="_blank">
-          <span className="text-zinc-300 underline underline-offset-2 transition-all duration-200 ease-linear hover:text-yellow-200">
+          <span className="text-foreground/80 underline underline-offset-2 transition-all duration-200 ease-linear hover:text-primary">
             lakshaybhushan
           </span>
           .

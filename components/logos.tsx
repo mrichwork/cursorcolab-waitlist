@@ -5,12 +5,10 @@ import { containerVariants, itemVariants } from "@/lib/animation-variants";
 import TextBlur from "./ui/text-blur";
 
 const logos = [
-  { href: "https://nextjs.org", src: "/nextjs.svg", alt: "Next.js Logo" },
-  { href: "https://notion.so", src: "/notion.svg", alt: "Notion Logo" },
-  { href: "https://resend.com", src: "/resend.svg", alt: "Resend Logo" },
-  { href: "https://upstash.com", src: "/upstash.svg", alt: "Upstash Logo" },
-  { href: "https://ui.shadcn.com", src: "/shadcn.svg", alt: "shadcn Logo" },
-  { href: "https://vercel.com", src: "/vercel.svg", alt: "Vercel Logo" },
+  { href: "https://www.jetbrains.com/", src: "/JetBrains.svg", alt: "JetBrains Logo" },
+  { href: "https://code.visualstudio.com/", src: "/vscodelogo.svg", alt: "VS Code Logo" },
+  { href: "https://cursor.com/", src: "/cursor.png", alt: "Cursor Logo" },
+  { href: "https://github.com/", src: "/github.png", alt: "GitHub Logo" },
 ];
 
 export default function Logos() {
@@ -23,21 +21,21 @@ export default function Logos() {
       <motion.div variants={itemVariants}>
         <TextBlur
           className="text-center text-2xl font-medium tracking-tight text-zinc-200 md:text-3xl"
-          text="Powered by"
+          text="Works with"
         />
       </motion.div>
 
       <motion.div variants={itemVariants}>
         <TextBlur
           className="text-center text-base text-zinc-300 sm:text-lg"
-          text="Simple and powerful tools that help you build faster"
+          text="Integrations that power your development"
           duration={0.8}
         />
       </motion.div>
 
       <motion.div
         variants={itemVariants}
-        className="mt-4 grid w-full grid-cols-2 items-center justify-center gap-4 md:mt-6 md:grid-cols-3 md:gap-6">
+        className="mt-4 grid w-full grid-cols-2 items-center justify-center gap-4 md:mt-6 md:grid-cols-2 md:gap-6">
         {logos.map((logo, index) => (
           <Link
             key={index}
@@ -50,7 +48,7 @@ export default function Logos() {
               alt={logo.alt}
               width={100}
               height={100}
-              className="h-auto w-32 opacity-85"
+              className="h-16 w-auto object-contain brightness-150"
             />
           </Link>
         ))}

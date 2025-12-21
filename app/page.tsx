@@ -7,7 +7,6 @@ import Form from "@/components/form";
 import Logos from "@/components/logos";
 import Particles from "@/components/ui/particles";
 import Header from "@/components/header";
-import Footer from "@/components/footer";
 
 export default function Home() {
   const [name, setName] = useState<string>("");
@@ -58,7 +57,7 @@ export default function Home() {
           } else {
             reject("Email sending failed");
           }
-          return; // Exit the promise early if mail sending fails
+          return;
         }
 
         // If email sending is successful, proceed to insert into Notion
@@ -127,13 +126,12 @@ export default function Home() {
         <Logos />
       </section>
 
-      <Footer />
-
       <Particles
-        quantityDesktop={350}
-        quantityMobile={100}
+        quantityDesktop={300}
+        quantityMobile={150}
         ease={80}
-        color={"#F7FF9B"}
+        size={2}
+        color={"#2f82c5"}
         refresh
       />
     </main>
