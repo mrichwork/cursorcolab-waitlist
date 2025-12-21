@@ -14,10 +14,10 @@ interface EmailProps {
   userFirstname: string;
 }
 
-export const NotionWaitlistEmail = ({ userFirstname }: EmailProps) => (
+export const CursorCoLabWelcomeEmail = ({ userFirstname }: EmailProps) => (
   <Html>
     <Head />
-    <Preview>Thanks for Joining the CursorCoLab Waitlist, {userFirstname}! 🎉</Preview>
+    <Preview>Thanks for Joining the CursorCoLab Waitlist!</Preview>
     <Body style={main}>
       <Container style={container}>
         <Img
@@ -50,23 +50,23 @@ export const NotionWaitlistEmail = ({ userFirstname }: EmailProps) => (
   </Html>
 );
 
-NotionWaitlistEmail.PreviewProps = {
-  userFirstname: "Tyler",
+CursorCoLabWelcomeEmail.PreviewProps = {
+  userFirstname: "User",
 } as EmailProps;
 
-export default NotionWaitlistEmail;
+export default CursorCoLabWelcomeEmail;
 
 const main = {
-  background: "linear-gradient(-225deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%)",
+  background: "#000000",
   fontFamily: 'figtree, "Helvetica Neue", Helvetica, Arial, sans-serif',
   padding: "40px 0",
-  color: "#cccccc",
+  color: "#fefefe",
 };
 
 const container = {
   margin: "0 auto",
   padding: "24px 32px 48px",
-  backgroundColor: "#1a1a1a",
+  backgroundColor: "#1e1e1e",
   borderRadius: "12px",
   boxShadow: "0 4px 20px rgba(0, 0, 0, 0.1)",
   maxWidth: "600px",
@@ -80,23 +80,21 @@ const logo = {
 const greeting = {
   fontSize: "18px",
   lineHeight: "28px",
+  color: "#fefefe",
 };
 
 const paragraph = {
   fontSize: "16px",
   lineHeight: "26px",
   marginBottom: "20px",
-};
-
-const link = {
-  color: "#F7FF9B",
-  textDecoration: "underline",
+  color: "#fefefe",
 };
 
 const signOff = {
   fontSize: "16px",
   lineHeight: "26px",
   marginTop: "20px",
+  color: "#fefefe",
 };
 
 const hr = {
