@@ -41,11 +41,11 @@ export const CursorCoLabWaitlistEmail = ({ userFirstname }: EmailProps) => (
         </Text>
 
         <Text style={paragraph}>
-          We're building this carefully and keeping it practical — no fluff, just tools that actually help when you're working on real projects.
+          We're taking a practical, considered approach to building CursorCoLab, focusing on features that make sharing and collaborating on code simpler and more reliable.
         </Text>
 
         <Text style={signOff}>
-          – The CursorCoLab team
+          The CursorCoLab team
         </Text>
 
         <Hr style={hr} />
