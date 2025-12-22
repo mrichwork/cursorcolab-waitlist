@@ -36,9 +36,12 @@ export const CursorCoLabWaitlistEmail = ({ userFirstname }: EmailProps) => (
         </Text>
 
         <Text style={paragraph}>
-          CursorCoLab is a collaborative coding platform designed to work
-          alongside the tools you already use, with flexible saving options and
-          broad editor integrations.
+          CursorCoLab is a collaborative coding platform built to work
+          alongside the tools you already use. We're focused on making it easier to work on code together, with things like cloud saving, optional local saves, and integrations across popular editors and platforms.
+        </Text>
+
+        <Text style={paragraph}>
+          We're building this carefully and keeping it practical — no fluff, just tools that actually help when you're working on real projects.
         </Text>
 
         <Text style={signOff}>
@@ -50,6 +53,10 @@ export const CursorCoLabWaitlistEmail = ({ userFirstname }: EmailProps) => (
         <Text style={footer}>
           You received this email because you signed up for the CursorCoLab
           waitlist.
+        </Text>
+
+        <Text style={copyright}>
+          © {new Date().getFullYear()} CursorCoLab. All rights reserved.
         </Text>
       </Container>
     </Body>
@@ -110,4 +117,11 @@ const hr = {
 const footer = {
   color: "#9aa0b2",
   fontSize: "12px",
+};
+
+const copyright = {
+  color: "#6b7280",
+  fontSize: "11px",
+  textAlign: "center" as const,
+  marginTop: "12px",
 };
