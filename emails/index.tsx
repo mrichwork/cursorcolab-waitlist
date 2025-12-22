@@ -18,12 +18,13 @@ export const CursorCoLabWaitlistEmail = ({ userFirstname }: EmailProps) => (
   <Html>
     <Head />
     <Preview>You’re on the CursorCoLab waitlist</Preview>
+
     <Body style={main}>
       <Container style={container}>
-        {/* CursorCoLab Logo */}
+        {/* Logo */}
         <Img
-          src="https://cursorcolab-waitlist.vercel.app/logo.png"
-          width="240"
+          src="https://cursorcolab-waitlist-kyu6t2mmq-mrichworks-projects.vercel.app/cursorcolab-logo.png"
+          width="260"
           alt="CursorCoLab"
           style={logo}
         />
@@ -61,8 +62,11 @@ CursorCoLabWaitlistEmail.PreviewProps = {
 
 export default CursorCoLabWaitlistEmail;
 
+/* ---------- Styles ---------- */
+
 const main = {
-  background: "#000000",
+  background:
+    "linear-gradient(135deg, #1e1e1e 0%, #2d4f6b 50%, #2f82c5 100%)",
   fontFamily: 'figtree, "Helvetica Neue", Helvetica, Arial, sans-serif',
   padding: "40px 0",
   color: "#fefefe",
@@ -70,9 +74,9 @@ const main = {
 
 const container = {
   margin: "0 auto",
-  padding: "28px 32px 44px",
+  padding: "32px 32px 44px",
   backgroundColor: "#1e1e1e",
-  borderRadius: "12px",
+  borderRadius: "14px",
   maxWidth: "600px",
 };
 
@@ -95,7 +99,7 @@ const paragraph = {
 const signOff = {
   fontSize: "16px",
   lineHeight: "26px",
-  marginTop: "20px",
+  marginTop: "22px",
 };
 
 const hr = {
