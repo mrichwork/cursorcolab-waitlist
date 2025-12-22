@@ -15,7 +15,6 @@ const redis = new Redis({
 
 const ratelimit = new Ratelimit({
   redis,
-  // 2 requests per minute from the same IP address in a sliding window of 1 minute duration which means that the window slides forward every second and the rate limit is reset every minute for each IP address.
   limiter: Ratelimit.slidingWindow(2, "1 m"),
 });
 
@@ -40,12 +39,10 @@ export async function POST(request: NextRequest, response: NextResponse) {
   const { data, error } = await resend.emails.send({
     from: "CursorCoLab <onboarding@resend.dev>",
     to: [email],
-    subject: "Thanks for joining the CursorCoLab waitlist!",
-    reply_to: "lakshb.work@gmail.com",
-    html:  await render(WelcomeTemplate({ userFirstname: firstname })),
+    subject: "You're on the CursorCoLab waitlist",
+    reply_to: "hello@cursorcolab.com",
+    html: await render(WelcomeTemplate({ userFirstname: firstname })),
   });
-
-  // const { data, error } = { data: true, error: null }
 
   if (error) {
     return NextResponse.json(error);

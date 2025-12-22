@@ -10,56 +10,63 @@ import {
 } from "@react-email/components";
 import * as React from "react";
 
-// CursorCoLab Waitlist Email Template
-// This is the ONLY official email template for CursorCoLab confirmations
 interface EmailProps {
   userFirstname: string;
 }
 
-export const CursorCoLabWelcomeEmail = ({ userFirstname }: EmailProps) => (
+export const CursorCoLabWaitlistEmail = ({ userFirstname }: EmailProps) => (
   <Html>
     <Head />
-    <Preview>Thanks for Joining the CursorCoLab Waitlist!</Preview>
+    <Preview>You're on the CursorCoLab waitlist</Preview>
+
     <Body style={main}>
       <Container style={container}>
+        {/* Logo */}
         <Img
-          src="https://cursorcolab-waitlist.vercel.app/logo-copy.png"
-          width="300"
-          height="65"
-          alt="CursorCoLab Logo"
+          src="https://cursorcolab-waitlist-kyu6t2mmq-mrichworks-projects.vercel.app/cursorcolab-logo.png"
+          width="260"
+          alt="CursorCoLab"
           style={logo}
         />
+
         <Text style={greeting}>Hey {userFirstname},</Text>
+
         <Text style={paragraph}>
           Thanks for joining the CursorCoLab waitlist.
         </Text>
+
         <Text style={paragraph}>
-          CursorCoLab is a collaborative coding platform designed to work alongside the tools you already use. We're focused on making it easier to work on code together, with flexible saving options and clean integrations.
+          CursorCoLab is a collaborative coding platform designed to work
+          alongside the tools you already use, with flexible saving options and
+          broad editor integrations.
         </Text>
-        <Text style={paragraph}>
-          You'll hear from us when there's something to share.
-        </Text>
+
         <Text style={signOff}>
           – The CursorCoLab team
         </Text>
+
         <Hr style={hr} />
+
         <Text style={footer}>
-          You received this email because you signed up for the CursorCoLab waitlist.
-          If you believe this is a mistake, feel free to ignore this email.
+          You received this email because you signed up for the CursorCoLab
+          waitlist.
         </Text>
       </Container>
     </Body>
   </Html>
 );
 
-CursorCoLabWelcomeEmail.PreviewProps = {
-  userFirstname: "User",
+CursorCoLabWaitlistEmail.PreviewProps = {
+  userFirstname: "Matt",
 } as EmailProps;
 
-export default CursorCoLabWelcomeEmail;
+export default CursorCoLabWaitlistEmail;
+
+/* ---------- Styles ---------- */
 
 const main = {
-  background: "#000000",
+  background:
+    "linear-gradient(135deg, #1e1e1e 0%, #2d4f6b 50%, #2f82c5 100%)",
   fontFamily: 'figtree, "Helvetica Neue", Helvetica, Arial, sans-serif',
   padding: "40px 0",
   color: "#fefefe",
@@ -67,44 +74,40 @@ const main = {
 
 const container = {
   margin: "0 auto",
-  padding: "24px 32px 48px",
+  padding: "32px 32px 44px",
   backgroundColor: "#1e1e1e",
-  borderRadius: "12px",
-  boxShadow: "0 4px 20px rgba(0, 0, 0, 0.1)",
+  borderRadius: "14px",
   maxWidth: "600px",
 };
 
 const logo = {
-  margin: "0 auto",
-  paddingBottom: "20px",
+  margin: "0 auto 28px",
+  display: "block",
 };
 
 const greeting = {
   fontSize: "18px",
   lineHeight: "28px",
-  color: "#fefefe",
 };
 
 const paragraph = {
   fontSize: "16px",
   lineHeight: "26px",
-  marginBottom: "20px",
-  color: "#fefefe",
+  marginBottom: "18px",
 };
 
 const signOff = {
   fontSize: "16px",
   lineHeight: "26px",
-  marginTop: "20px",
-  color: "#fefefe",
+  marginTop: "22px",
 };
 
 const hr = {
-  borderColor: "#cccccc",
-  margin: "20px 0",
+  borderColor: "#2d4f6b",
+  margin: "28px 0",
 };
 
 const footer = {
-  color: "#8c8c8c",
+  color: "#9aa0b2",
   fontSize: "12px",
 };
