@@ -23,7 +23,7 @@ export const CursorCoLabWaitlistEmail = ({ userFirstname }: EmailProps) => (
       <Container style={container}>
         {/* Logo */}
         <Img
-          src="https://cursorcolab-waitlist-kyu6t2mmq-mrichworks-projects.vercel.app/cursorcolab-logo.png"
+          src="https://cursorcolab-waitlist.vercel.app/logo-copy.png"
           width="260"
           alt="CursorCoLab"
           style={logo}
