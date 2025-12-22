@@ -10,6 +10,8 @@ import {
 } from "@react-email/components";
 import * as React from "react";
 
+// CursorCoLab Waitlist Email Template
+// This is the ONLY official email template for CursorCoLab confirmations
 interface EmailProps {
   userFirstname: string;
 }
