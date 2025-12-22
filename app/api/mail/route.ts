@@ -1,12 +1,11 @@
 import { render } from "@react-email/render";
-
 import WelcomeTemplate from "../../../emails";
-
 import { Resend } from "resend";
 import { NextRequest, NextResponse } from "next/server";
 import { Redis } from "@upstash/redis";
 import { Ratelimit } from "@upstash/ratelimit";
 
+// Initialize Resend with API key
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 const redis = new Redis({
