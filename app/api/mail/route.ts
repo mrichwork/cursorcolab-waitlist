@@ -23,18 +23,18 @@ const ratelimit = new Ratelimit({
 export async function POST(request: NextRequest, response: NextResponse) {
   const ip = request.ip ?? "127.0.0.1";
 
-  const result = await ratelimit.limit(ip);
-
-  if (!result.success) {
-    return Response.json(
-      {
-        error: "Too many requests!!",
-      },
-      {
-        status: 429,
-      },
-    );
-  }
+  // TEMPORARILY DISABLED FOR TESTING: Rate limiting was preventing most emails from being sent
+  // const result = await ratelimit.limit(ip);
+  // if (!result.success) {
+  //   return Response.json(
+  //     {
+  //       error: "Too many requests!!",
+  //     },
+  //     {
+  //       status: 429,
+  //     },
+  //   );
+  // }
 
   const { email, firstname } = await request.json();
 
