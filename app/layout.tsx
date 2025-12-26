@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description:
     "Join the CursorCoLab waitlist to get early access to our developer-focused platform and receive updates on our progress.",
   icons: {
-    icon: "/logo-copy.png",
+    icon: "/icon.png",
   },
 };
 
