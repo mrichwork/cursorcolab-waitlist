@@ -23,7 +23,7 @@ const ratelimit = new Ratelimit({
 export async function POST(request: NextRequest, response: NextResponse) {
   const ip = request.ip ?? "127.0.0.1";
 
-  // TEMPORARILY DISABLED FOR TESTING: Rate limiting was preventing most emails from being sent
+  // TEMPORARILY DISABLED FOR TESTING: Rate limiting was preventing emails from being sent
   // const result = await ratelimit.limit(ip);
   // if (!result.success) {
   //   return Response.json(
