@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: "CursorCoLab — Waitlist",
   description:
     "Join the CursorCoLab waitlist to get early access to our developer-focused platform and receive updates on our progress.",
+  icons: {
+    icon: "/logo-copy.png",
+  },
 };
 
 export default function RootLayout({
