@@ -11,7 +11,10 @@ export const metadata: Metadata = {
   description:
     "Join the CursorCoLab waitlist to get early access to our developer-focused platform and receive updates on our progress.",
   icons: {
-    icon: "/icon.png",
+    icon: [
+      { url: "/icon.png", type: "image/png" },
+      { url: "/favicon.ico", type: "image/x-icon" },
+    ],
   },
 };
 
@@ -22,6 +25,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/icon.png" type="image/png" />
+        <link rel="shortcut icon" href="/icon.png" />
+      </head>
       <meta property="og:image" content="/opengraph-image.png" />
       <meta property="og:image:type" content="image/png" />
       <meta property="og:image:width" content="1280" />
