@@ -42,7 +42,7 @@ export async function POST(request: NextRequest, response: NextResponse) {
     from: "CursorCoLab <noreply@cursorcolab.com>",
     to: [email],
     subject: "You're on the CursorCoLab waitlist",
-    reply_to: "hello@cursorcolab.com",
+    reply_to: "cursorcolabmain@gmail.com",
     html:  await render(WelcomeTemplate({ userFirstname: firstname })),
   });
 
