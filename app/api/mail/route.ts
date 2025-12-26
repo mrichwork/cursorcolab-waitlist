@@ -39,7 +39,7 @@ export async function POST(request: NextRequest, response: NextResponse) {
   const { email, firstname } = await request.json();
 
   const { data, error } = await resend.emails.send({
-    from: "CursorCoLab <onboarding@resend.dev>",
+    from: "CursorCoLab <noreply@cursorcolab.com>",
     to: [email],
     subject: "You're on the CursorCoLab waitlist",
     reply_to: "hello@cursorcolab.com",
